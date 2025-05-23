@@ -142,6 +142,52 @@
             background-color: rgba(255,255,255,0.2);
             text-decoration: none;
         }
+        
+        /* Dashboard styles */
+        .dashboard-card {
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+            background: white;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .dashboard-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .value-proposition {
+            background-color: white;
+            padding: 3rem 0;
+            border-radius: 10px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .value-item {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .value-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -157,6 +203,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="#why-us">Why Us</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#features">Features</a>
                     </li>
                     <li class="nav-item">
@@ -168,9 +217,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="loginNavItem">
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
                             <i class="fas fa-sign-in-alt me-1"></i>Login
+                        </a>
+                    </li>
+                    <li class="nav-item hidden" id="dashboardNavItem">
+                        <a class="nav-link" href="#" id="dashboardLink">
+                            <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item hidden" id="logoutNavItem">
+                        <a class="nav-link" href="#" id="logoutLink">
+                            <i class="fas fa-sign-out-alt me-1"></i>Logout
                         </a>
                     </li>
                 </ul>
@@ -184,7 +243,89 @@
             <h1 class="display-4 fw-bold mb-4">Your Path to Success Starts Here</h1>
             <p class="lead mb-5">Discover the right education and career path with expert guidance</p>
             <a href="#" class="btn btn-light btn-lg me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Get Started</a>
-            <a href="#features" class="btn btn-outline-light btn-lg">Learn More</a>
+            <a href="#why-us" class="btn btn-outline-light btn-lg">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Why Students & Professionals Choose ORBT-LEARN</h2>
+                <p class="lead">7 key reasons that make us the preferred career guidance platform</p>
+            </div>
+            
+            <div class="value-proposition">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h4>Comprehensive Educational Services</h4>
+                            <p>We provide end-to-end guidance from school to higher education, helping you choose the right path at every stage.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h4>Pan-India Job Opportunities</h4>
+                            <p>Access job listings across all industries and locations in India, with insights into regional job markets.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4>Success Stories & Learning Paths</h4>
+                            <p>Learn from professionals who've made it - their education choices, career journeys, and key decisions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Real Career Experiences</h4>
+                            <p>Gain insights from industry veterans about job realities, work-life balance, and career progression.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Best Learning Platforms</h4>
+                            <p>Curated list of top-rated online/offline learning resources with honest reviews and recommendations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4>Real-World Projects</h4>
+                            <p>Build your portfolio with industry-relevant projects that give you practical, hands-on experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Interview Preparation</h4>
+                            <p>Master interviews with our comprehensive guides, mock sessions, and company-specific preparation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -263,63 +404,94 @@
         </div>
     </div>
 
-    <!-- Forgot Password Modal -->
-    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="forgotPasswordModalLabel">Reset Password</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="forgotPasswordForm">
-                        <div class="mb-3">
-                            <label for="resetEmail" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="resetEmail" required>
+    <!-- Dashboard Section (Hidden by default) -->
+    <section id="dashboard" class="py-5 hidden">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Welcome to Your Dashboard</h2>
+                <p class="lead">Choose your path to success</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Send Reset Link</button>
-                    </form>
+                        <h3>Education Guidance</h3>
+                        <p>Get personalized recommendations for courses and streams based on your skills and interests.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2">Explore</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Career Explorer</h3>
+                        <p>Discover career paths with detailed information on job roles, salaries, and growth prospects.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2">Explore Careers</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Skill Development</h3>
+                        <p>Access curated learning resources and real-world projects to build your skills.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2">Start Learning</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Terms Modal -->
-    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Job Opportunities</h3>
+                        <p>Browse thousands of job listings across India with company insights and application guidance.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2">Find Jobs</a>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <h6>Last Updated: June 2023</h6>
-                    <p>Please read these Terms and Conditions carefully before using the ORBT-LEARN website.</p>
-                    <h5 class="mt-4">1. Acceptance of Terms</h5>
-                    <p>By accessing or using our service, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service.</p>
-                    
-                    <h5 class="mt-4">2. User Responsibilities</h5>
-                    <p>You are responsible for maintaining the confidentiality of your account and password and for restricting access to your computer.</p>
-                    
-                    <h5 class="mt-4">3. Privacy Policy</h5>
-                    <p>Our Privacy Policy explains how we collect, use, and protect your personal information.</p>
-                    
-                    <h5 class="mt-4">4. Limitation of Liability</h5>
-                    <p>ORBT-LEARN shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your use of the service.</p>
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Interview Prep</h3>
+                        <p>Practice with mock interviews, common questions, and company-specific preparation guides.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2">Prepare Now</a>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Mentorship</h3>
+                        <p>Connect with industry professionals for personalized career advice and guidance.</p>
+                        <a href="#" class="btn btn-outline-primary mt-2">Find a Mentor</a>
+                    </div>
                 </div>
             </div>
+            
+            <!-- Ad Space in Dashboard -->
+            <div class="ad-space mt-5">
+                <h4>Premium Career Assessment</h4>
+                <p>Take our comprehensive career assessment to discover your ideal career path</p>
+                <a href="#" class="btn btn-accent">Take Assessment Now</a>
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Features Section -->
     <section id="features" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-bold">Why Choose ORBT-LEARN?</h2>
-                <p class="lead">We provide the guidance you need to make informed decisions about your education and career</p>
+                <h2 class="fw-bold">Our Key Features</h2>
+                <p class="lead">Everything you need to make informed education and career decisions</p>
             </div>
             
             <div class="row">
@@ -651,110 +823,4 @@
                     <p>Your guide to education and career success.</p>
                     <div class="social-links mt-3">
                         <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h5 class="mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#features" class="text-white text-decoration-none">Features</a></li>
-                        <li class="mb-2"><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
-                        <li class="mb-2"><a href="#careers" class="text-white text-decoration-none">Careers</a></li>
-                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="mb-3">Resources</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Career Assessments</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Scholarships</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Resume Builder</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Interview Tips</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Webinars</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="mb-3">Support</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Help Center</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Terms of Service</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">FAQs</a></li>
-                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact Support</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="bg-light my-4">
-            <div class="row">
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <p class="mb-0">&copy; 2023 ORBT-LEARN. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-0">Made with <i class="fas fa-heart text-danger"></i> in India</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Using direct CDN links with https -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Form validation for registration
-        document.getElementById('registerForm')?.addEventListener('submit', function(e) {
-            const password = document.getElementById('regPassword')?.value;
-            const confirmPassword = document.getElementById('regConfirmPassword')?.value;
-            
-            if (password && confirmPassword && password !== confirmPassword) {
-                e.preventDefault();
-                alert('Passwords do not match!');
-                document.getElementById('regConfirmPassword').focus();
-            }
-            
-            if (!document.getElementById('termsCheck').checked) {
-                e.preventDefault();
-                alert('You must agree to the Terms and Conditions');
-            }
-        });
-        
-        // Simple form submission handlers (would be replaced with actual AJAX in production)
-        document.getElementById('loginForm')?.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // In a real app, this would be an AJAX call
-            alert('Login functionality would be implemented here');
-            // Close modal after "login"
-            var modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
-            modal.hide();
-        });
-        
-        document.getElementById('forgotPasswordForm')?.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // In a real app, this would be an AJAX call
-            alert('Password reset link would be sent to your email');
-            // Close modal
-            var modal = bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal'));
-            modal.hide();
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                        <a href="#" class="text-white me-2"><i class="fab
