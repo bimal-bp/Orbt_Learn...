@@ -183,10 +183,26 @@
             text-align: center;
         }
         
-        .value-icon {
-            font-size: 2rem;
+        .bullet-points {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .bullet-points li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .bullet-points li:last-child {
+            border-bottom: none;
+        }
+        
+        .bullet-points li i {
             color: var(--primary-color);
-            margin-bottom: 1rem;
+            margin-right: 15px;
+            margin-top: 3px;
         }
     </style>
 </head>
@@ -251,79 +267,63 @@
     <section id="why-us" class="py-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-bold">Why Students & Professionals Choose ORBT-LEARN</h2>
-                <p class="lead">7 key reasons that make us the preferred career guidance platform</p>
+                <h2 class="fw-bold">Why Choose ORBT-LEARN</h2>
+                <p class="lead">Key benefits that make us the preferred career guidance platform</p>
             </div>
             
             <div class="value-proposition">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-book-open"></i>
+                <div class="container">
+                    <ul class="bullet-points">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Comprehensive Educational Services</h5>
+                                <p class="mb-0">End-to-end guidance from school to higher education, helping you choose the right path at every stage.</p>
                             </div>
-                            <h4>Comprehensive Educational Services</h4>
-                            <p>We provide end-to-end guidance from school to higher education, helping you choose the right path at every stage.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-briefcase"></i>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Pan-India Job Opportunities</h5>
+                                <p class="mb-0">Access job listings across all industries and locations in India with regional market insights.</p>
                             </div>
-                            <h4>Pan-India Job Opportunities</h4>
-                            <p>Access job listings across all industries and locations in India, with insights into regional job markets.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-user-tie"></i>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Success Stories & Learning Paths</h5>
+                                <p class="mb-0">Learn from professionals' education choices, career journeys, and key decisions.</p>
                             </div>
-                            <h4>Success Stories & Learning Paths</h4>
-                            <p>Learn from professionals who've made it - their education choices, career journeys, and key decisions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-chart-line"></i>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Real Career Experiences</h5>
+                                <p class="mb-0">Gain insights from industry veterans about job realities and career progression.</p>
                             </div>
-                            <h4>Real Career Experiences</h4>
-                            <p>Gain insights from industry veterans about job realities, work-life balance, and career progression.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-graduation-cap"></i>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Best Learning Platforms</h5>
+                                <p class="mb-0">Curated list of top-rated learning resources with honest reviews.</p>
                             </div>
-                            <h4>Best Learning Platforms</h4>
-                            <p>Curated list of top-rated online/offline learning resources with honest reviews and recommendations.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-laptop-code"></i>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Real-World Projects</h5>
+                                <p class="mb-0">Build your portfolio with industry-relevant practical experience.</p>
                             </div>
-                            <h4>Real-World Projects</h4>
-                            <p>Build your portfolio with industry-relevant projects that give you practical, hands-on experience.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-4">
-                        <div class="value-item">
-                            <div class="value-icon">
-                                <i class="fas fa-comments"></i>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Interview Preparation</h5>
+                                <p class="mb-0">Master interviews with comprehensive guides and mock sessions.</p>
                             </div>
-                            <h4>Interview Preparation</h4>
-                            <p>Master interviews with our comprehensive guides, mock sessions, and company-specific preparation.</p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -409,79 +409,80 @@
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Welcome to Your Dashboard</h2>
-                <p class="lead">Choose your path to success</p>
+                <p class="lead">Explore our comprehensive career guidance services</p>
             </div>
             
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="dashboard-card">
                         <div class="dashboard-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
                         <h3>Education Guidance</h3>
-                        <p>Get personalized recommendations for courses and streams based on your skills and interests.</p>
-                        <a href="#" class="btn btn-outline-primary mt-2">Explore</a>
+                        <p>Get personalized recommendations for your academic path.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Explore Options</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="dashboard-card">
                         <div class="dashboard-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
-                        <h3>Career Explorer</h3>
-                        <p>Discover career paths with detailed information on job roles, salaries, and growth prospects.</p>
-                        <a href="#" class="btn btn-outline-primary mt-2">Explore Careers</a>
+                        <h3>Job Opportunities</h3>
+                        <p>Discover career options across India.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Browse Jobs</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Success Stories</h3>
+                        <p>Learn from professionals' career journeys.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">View Stories</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Career Insights</h3>
+                        <p>Understand job realities and growth paths.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Get Insights</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
                     <div class="dashboard-card">
                         <div class="dashboard-icon">
                             <i class="fas fa-laptop-code"></i>
                         </div>
-                        <h3>Skill Development</h3>
-                        <p>Access curated learning resources and real-world projects to build your skills.</p>
-                        <a href="#" class="btn btn-outline-primary mt-2">Start Learning</a>
+                        <h3>Learning Resources</h3>
+                        <p>Access top-rated educational platforms.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Find Resources</a>
                     </div>
                 </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-4">
                     <div class="dashboard-card">
                         <div class="dashboard-icon">
-                            <i class="fas fa-building"></i>
+                            <i class="fas fa-project-diagram"></i>
                         </div>
-                        <h3>Job Opportunities</h3>
-                        <p>Browse thousands of job listings across India with company insights and application guidance.</p>
-                        <a href="#" class="btn btn-outline-primary mt-2">Find Jobs</a>
+                        <h3>Practical Projects</h3>
+                        <p>Build hands-on experience.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Start Projects</a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6 col-lg-4 mx-auto">
                     <div class="dashboard-card">
                         <div class="dashboard-icon">
                             <i class="fas fa-comments"></i>
                         </div>
                         <h3>Interview Prep</h3>
-                        <p>Practice with mock interviews, common questions, and company-specific preparation guides.</p>
-                        <a href="#" class="btn btn-outline-primary mt-2">Prepare Now</a>
+                        <p>Master your interview skills.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Prepare Now</a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="dashboard-card">
-                        <div class="dashboard-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3>Mentorship</h3>
-                        <p>Connect with industry professionals for personalized career advice and guidance.</p>
-                        <a href="#" class="btn btn-outline-primary mt-2">Find a Mentor</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Ad Space in Dashboard -->
-            <div class="ad-space mt-5">
-                <h4>Premium Career Assessment</h4>
-                <p>Take our comprehensive career assessment to discover your ideal career path</p>
-                <a href="#" class="btn btn-accent">Take Assessment Now</a>
             </div>
         </div>
     </section>
@@ -528,15 +529,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Ad Space -->
-    <div class="container">
-        <div class="ad-space">
-            <h4>Advertisement Space</h4>
-            <p>Partner with us to reach students and professionals</p>
-            <a href="#" class="btn btn-outline-secondary">Advertise with us</a>
-        </div>
-    </div>
 
     <!-- Courses Section -->
     <section id="courses" class="py-5 bg-white">
@@ -649,15 +641,6 @@
         </div>
     </section>
 
-    <!-- Ad Space -->
-    <div class="container">
-        <div class="ad-space">
-            <h4>Premium Career Assessments</h4>
-            <p>Take our comprehensive career assessment to discover your ideal career path</p>
-            <a href="#" class="btn btn-accent">Take Assessment Now</a>
-        </div>
-    </div>
-
     <!-- About Section -->
     <section id="about" class="py-5 bg-white">
         <div class="container">
@@ -666,10 +649,6 @@
                     <h2 class="fw-bold mb-4">About ORBT-LEARN</h2>
                     <p>ORBT-LEARN is dedicated to helping students and professionals make informed decisions about their education and career paths. Our mission is to bridge the gap between education and employment by providing comprehensive guidance and resources.</p>
                     <p>We believe that everyone deserves access to accurate information and expert advice when making critical decisions about their future.</p>
-                    <div class="mt-4">
-                        <h5>Our Team</h5>
-                        <p>Our team consists of career counselors, education experts, and industry professionals who are passionate about guiding individuals toward fulfilling careers.</p>
-                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
@@ -704,111 +683,8 @@
                                     </div>
                                 </li>
                             </ul>
-                            <div class="mt-4">
-                                <h6>Business Hours</h6>
-                                <p class="mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                                <p class="mb-0">Saturday: 10:00 AM - 4:00 PM</p>
-                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-5" style="background-color: #f0f8ff;">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">What Our Users Say</h2>
-                <p class="lead">Success stories from students and professionals</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <div class="mb-3 text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="card-text">"ORBT-LEARN helped me discover a career path I never considered. The guidance was personalized and practical."</p>
-                            <div class="d-flex align-items-center mt-3">
-                                <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="50" alt="User">
-                                <div>
-                                    <h6 class="mb-0">Priya Sharma</h6>
-                                    <small class="text-muted">Engineering Student</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <div class="mb-3 text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <p class="card-text">"The career assessment was eye-opening. I'm now pursuing my MBA with clear goals thanks to ORBT-LEARN."</p>
-                            <div class="d-flex align-items-center mt-3">
-                                <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="50" alt="User">
-                                <div>
-                                    <h6 class="mb-0">Rahul Patel</h6>
-                                    <small class="text-muted">MBA Student</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <div class="mb-3 text-warning">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="card-text">"As a parent, I found the education guidance invaluable for helping my daughter choose her 12th grade stream."</p>
-                            <div class="d-flex align-items-center mt-3">
-                                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50" alt="User">
-                                <div>
-                                    <h6 class="mb-0">Anita Desai</h6>
-                                    <small class="text-muted">Parent</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="py-5 bg-primary text-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h3 class="fw-bold mb-3">Subscribe to Our Newsletter</h3>
-                    <p class="mb-0">Get the latest education and career guidance delivered to your inbox</p>
-                </div>
-                <div class="col-lg-6">
-                    <form class="row g-2">
-                        <div class="col-8">
-                            <input type="email" class="form-control form-control-lg" placeholder="Your email address" required>
-                        </div>
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-light btn-lg w-100">Subscribe</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -823,4 +699,73 @@
                     <p>Your guide to education and career success.</p>
                     <div class="social-links mt-3">
                         <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#why-us" class="text-white text-decoration-none">Why Choose Us</a></li>
+                        <li class="mb-2"><a href="#features" class="text-white text-decoration-none">Features</a></li>
+                        <li class="mb-2"><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
+                        <li class="mb-2"><a href="#careers" class="text-white text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Terms of Service</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 ORBT-LEARN. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for students</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple login/logout functionality for demo
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('loginNavItem').classList.add('hidden');
+            document.getElementById('dashboardNavItem').classList.remove('hidden');
+            document.getElementById('logoutNavItem').classList.remove('hidden');
+            document.getElementById('dashboard').classList.remove('hidden');
+            document.getElementById('loginModal').classList.remove('show');
+            document.querySelector('.modal-backdrop').remove();
+            document.body.classList.remove('modal-open');
+            document.body.style = '';
+        });
+
+        document.getElementById('logoutLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('loginNavItem').classList.remove('hidden');
+            document.getElementById('dashboardNavItem').classList.add('hidden');
+            document.getElementById('logoutNavItem').classList.add('hidden');
+            document.getElementById('dashboard').classList.add('hidden');
+        });
+
+        document.getElementById('dashboardLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: document.getElementById('dashboard').offsetTop - 70,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
