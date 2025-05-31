@@ -28,7 +28,7 @@ st.markdown("""
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
-        .feature-box {
+        .info-box {
             padding: 20px;
             background-color: #f0f8ff;
             border-radius: 10px;
@@ -54,6 +54,20 @@ st.markdown("""
             color: white !important;
             border: none !important;
             width: 100%;
+            margin-bottom: 10px;
+        }
+        .btn-quaternary {
+            background-color: #e67e22 !important;
+            color: white !important;
+            border: none !important;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -65,9 +79,9 @@ if 'messages' not in st.session_state:
     ]
 
 # Main page layout
-col1, col2, col3 = st.columns([1, 1, 1])
+col1, col2 = st.columns([1, 2])
 
-# Left column - Logo and Buttons
+# Left column - Logo and Login
 with col1:
     # Logo Box
     st.markdown("""
@@ -76,6 +90,7 @@ with col1:
             <h2>EduCareer Pro</h2>
             <p>"Empowering Your Future Through Education"</p>
             <button class="btn-tertiary">Explore Courses</button>
+            <button class="btn-quaternary">My Dashboard</button>
         </div>
     """, unsafe_allow_html=True)
     
@@ -91,57 +106,60 @@ with col1:
             </div>
         """, unsafe_allow_html=True)
 
-# Middle column - Career Options
+# Right column - Combined Career Paths and Features
 with col2:
     with st.container():
         st.markdown("""
-            <div class="feature-box">
-                <h3>Career Paths</h3>
-                <div style="margin-bottom:15px;">
-                    <h4>Technology</h4>
-                    <p>Software Development, Data Science, Cybersecurity</p>
-                </div>
-                <div style="margin-bottom:15px;">
-                    <h4>Business</h4>
-                    <p>Management, Marketing, Finance</p>
-                </div>
-                <div style="margin-bottom:15px;">
-                    <h4>Healthcare</h4>
-                    <p>Medicine, Nursing, Pharmacy</p>
-                </div>
-                <div>
-                    <h4>Creative Arts</h4>
-                    <p>Design, Media, Performing Arts</p>
+            <div class="info-box">
+                <h3 class="section-title">Career Paths & Why Choose Us</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <!-- Career Paths Column -->
+                    <div>
+                        <h4 style="color: #3498db;">Career Paths</h4>
+                        <div style="margin-bottom:15px;">
+                            <h5>Technology</h5>
+                            <p>Software Development, Data Science, Cybersecurity</p>
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <h5>Business</h5>
+                            <p>Management, Marketing, Finance</p>
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <h5>Healthcare</h5>
+                            <p>Medicine, Nursing, Pharmacy</p>
+                        </div>
+                        <div>
+                            <h5>Creative Arts</h5>
+                            <p>Design, Media, Performing Arts</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Why Choose Us Column -->
+                    <div>
+                        <h4 style="color: #3498db;">Why Choose Us?</h4>
+                        <div style="margin-bottom:15px;">
+                            <h5>Industry Experts</h5>
+                            <p>Learn from professionals with real-world experience</p>
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <h5>Job Placement</h5>
+                            <p>90% placement rate within 3 months</p>
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <h5>Flexible Learning</h5>
+                            <p>Study at your own pace, anytime, anywhere</p>
+                        </div>
+                        <div>
+                            <h5>Affordable</h5>
+                            <p>Quality education at competitive prices</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         """, unsafe_allow_html=True)
 
-# Right column - Features
-with col3:
-    with st.container():
-        st.markdown("""
-            <div class="feature-box">
-                <h3>Why Choose Us?</h3>
-                <div style="margin-bottom:15px;">
-                    <h4>Industry Experts</h4>
-                    <p>Learn from professionals with real-world experience</p>
-                </div>
-                <div style="margin-bottom:15px;">
-                    <h4>Job Placement</h4>
-                    <p>90% placement rate within 3 months</p>
-                </div>
-                <div style="margin-bottom:15px;">
-                    <h4>Flexible Learning</h4>
-                    <p>Study at your own pace, anytime, anywhere</p>
-                </div>
-                <div>
-                    <h4>Affordable</h4>
-                    <p>Quality education at competitive prices</p>
-                </div>
-            </div>
-        """, unsafe_allow_html=True)
-
-# Simple chat interface (without the toggle functionality)
+# Simple chat interface
 st.markdown("---")
 st.subheader("Chat with our Career Advisor")
 
