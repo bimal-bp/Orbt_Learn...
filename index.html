@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORBT Learn Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .dashboard-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        
+        .dashboard-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .dashboard-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: #f8fafc;
+            border-left: 4px solid #2a5298;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .feature-card ul {
+            list-style-type: none;
+        }
+        
+        .feature-card li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .feature-card li:before {
+            content: "•";
+            color: #2a5298;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e0e8f0 100%);
+            border-radius: 8px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #2a5298;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #1e3c72;
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>ORBT Learn</h1>
+            <p>Your Comprehensive Education & Career Development Platform</p>
+        </div>
+        
+        <div class="dashboard-content">
+            <h2 style="color: #1e3c72; margin-bottom: 1rem;">Everything You Need for Career Success</h2>
+            <p style="margin-bottom: 1.5rem;">We provide end-to-end solutions for students and professionals at every stage of their journey.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Educational Resources</h3>
+                    <ul>
+                        <li>Complete study materials for all courses</li>
+                        <li>Curriculum-aligned content</li>
+                        <li>E-books and reference materials</li>
+                        <li>Video lectures and tutorials</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Career Guidance</h3>
+                    <ul>
+                        <li>Success stories from industry leaders</li>
+                        <li>Career path roadmaps</li>
+                        <li>Industry trend analysis</li>
+                        <li>Mentorship programs</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Job Preparation</h3>
+                    <ul>
+                        <li>Government job notifications</li>
+                        <li>Private sector opportunities</li>
+                        <li>Exam preparation strategies</li>
+                        <li>Interview preparation kits</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Senior Insights</h3>
+                    <ul>
+                        <li>Mistakes to avoid in your career</li>
+                        <li>Industry-specific advice</li>
+                        <li>Networking strategies</li>
+                        <li>Workplace etiquette</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Skill Development</h3>
+                    <ul>
+                        <li>Technical skill courses</li>
+                        <li>Soft skill training</li>
+                        <li>Certification programs</li>
+                        <li>Project-based learning</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Community Support</h3>
+                    <ul>
+                        <li>Q&A forums with experts</li>
+                        <li>Peer discussion groups</li>
+                        <li>Doubt-solving sessions</li>
+                        <li>Alumni networks</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3 style="color: #1e3c72; margin-bottom: 1rem;">Ready to Transform Your Career?</h3>
+                <p>Join thousands of learners who have accelerated their careers with ORBT Learn</p>
+                <a href="#" class="cta-button">Get Started Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
