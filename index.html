@@ -52,10 +52,30 @@
         
         .feature-card {
             background: #f8fafc;
-            border-left: 4px solid #2a5298;
+            border-left: 4px solid;
             padding: 1.5rem;
             border-radius: 8px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* Different colored borders for each card */
+        .feature-card:nth-child(1) {
+            border-color: #3B82F6; /* Blue */
+        }
+        .feature-card:nth-child(2) {
+            border-color: #10B981; /* Emerald */
+        }
+        .feature-card:nth-child(3) {
+            border-color: #F59E0B; /* Amber */
+        }
+        .feature-card:nth-child(4) {
+            border-color: #6366F1; /* Indigo */
+        }
+        .feature-card:nth-child(5) {
+            border-color: #EC4899; /* Pink */
+        }
+        .feature-card:nth-child(6) {
+            border-color: #14B8A6; /* Teal */
         }
         
         .feature-card:hover {
@@ -64,9 +84,28 @@
         }
         
         .feature-card h3 {
-            color: #1e3c72;
             margin-bottom: 1rem;
             font-size: 1.2rem;
+        }
+        
+        /* Matching heading colors to borders */
+        .feature-card:nth-child(1) h3 {
+            color: #3B82F6;
+        }
+        .feature-card:nth-child(2) h3 {
+            color: #10B981;
+        }
+        .feature-card:nth-child(3) h3 {
+            color: #F59E0B;
+        }
+        .feature-card:nth-child(4) h3 {
+            color: #6366F1;
+        }
+        .feature-card:nth-child(5) h3 {
+            color: #EC4899;
+        }
+        .feature-card:nth-child(6) h3 {
+            color: #14B8A6;
         }
         
         .feature-card ul {
@@ -81,10 +120,29 @@
         
         .feature-card li:before {
             content: "•";
-            color: #2a5298;
             font-weight: bold;
             position: absolute;
             left: 0;
+        }
+        
+        /* Matching bullet colors to borders */
+        .feature-card:nth-child(1) li:before {
+            color: #3B82F6;
+        }
+        .feature-card:nth-child(2) li:before {
+            color: #10B981;
+        }
+        .feature-card:nth-child(3) li:before {
+            color: #F59E0B;
+        }
+        .feature-card:nth-child(4) li:before {
+            color: #6366F1;
+        }
+        .feature-card:nth-child(5) li:before {
+            color: #EC4899;
+        }
+        .feature-card:nth-child(6) li:before {
+            color: #14B8A6;
         }
         
         .cta-section {
